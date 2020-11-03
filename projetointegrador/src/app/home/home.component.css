@@ -1,5 +1,5 @@
 .parallax {
-  background-image: url("/assets/img/puzzle.png");
+  background-image: url("/assets/img/office.jpg");
   opacity: 0.8;
   min-height: 500px;
   background-attachment: fixed;
@@ -10,11 +10,11 @@
 
 .parallax p.color-txt,
 h1 {
-  color: #ffffff;
+  color: #000000;
 }
 
 .paralax {
-  background-image: url("/assets/img/puzzle.png");
+  background-image: url("/assets/img/estudante.jpg");
   opacity: 0.8;
   min-height: 500px;
   background-attachment: fixed;
@@ -40,4 +40,13 @@ h1 {
   top: 145px;
   left: 255px;
   font-size: 40px;
+}
+.b1{
+  background-color: #DCC5E5;
+}
+.b2{
+  background-color: #77409A;
+}
+.b3{
+  background-color: #987CAC;
 }

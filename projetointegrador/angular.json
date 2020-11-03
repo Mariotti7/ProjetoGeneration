@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "projetointegrador"
+    }
+  },
+  "defaultProject": "projetointegrador",
+  "cli": {
+    "analytics": "9d1b6749-af37-41fa-9624-04c3be25c122"
+  }
 }
