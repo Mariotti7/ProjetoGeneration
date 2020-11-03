@@ -1,0 +1,43 @@
+.parallax {
+  background-image: url("/assets/img/puzzle.png");
+  opacity: 0.8;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax p.color-txt,
+h1 {
+  color: #ffffff;
+}
+
+.paralax {
+  background-image: url("/assets/img/puzzle.png");
+  opacity: 0.8;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.botao-estilo {
+  box-shadow: 5px 10px #888888;
+}
+
+.posiCard {
+  bottom: 32px;
+}
+
+.txtSize {
+  font-size: 30pt;
+}
+
+.paralax h1.txtPosicao {
+  position: absolute;
+  top: 145px;
+  left: 255px;
+  font-size: 40px;
+}
