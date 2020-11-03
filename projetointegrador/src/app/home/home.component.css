@@ -1,5 +1,5 @@
 .parallax {
-  background-image: url("/assets/img/puzzle.png");
+  background-image: url("/assets/img/learning1.jpg");
   opacity: 0.8;
   min-height: 500px;
   background-attachment: fixed;
@@ -14,7 +14,7 @@ h1 {
 }
 
 .paralax {
-  background-image: url("/assets/img/puzzle.png");
+  background-image: url("/assets/img/learning2.jpg");
   opacity: 0.8;
   min-height: 500px;
   background-attachment: fixed;
