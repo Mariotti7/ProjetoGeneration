@@ -12,7 +12,7 @@ ul.social-network {
   }
   
   .faFacebook, .faLinkedin, .faInstagram{
-      color:#1E6B6B;
+      color:#FFFF;
   }
   
   .faFacebook:hover{
@@ -28,5 +28,9 @@ ul.social-network {
   }
 
   .color-footer{
-    background: linear-gradient(to right ,#D856E0, #8A29A0,  #31064D);
+    background: linear-gradient(to right ,#AC9685, #AC9685,  #AC9685);
+  }
+
+  .apresentacao {
+    opacity: 0.2;
   }
