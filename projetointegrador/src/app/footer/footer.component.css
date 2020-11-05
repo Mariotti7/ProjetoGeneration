@@ -12,21 +12,32 @@ ul.social-network {
   }
   
   .faFacebook, .faLinkedin, .faInstagram{
-      color:#1E6B6B;
+      color:#ffffff;
   }
   
   .faFacebook:hover{
-    color: #3b5998;
+    color: #c38a5b;
   }
   
   .faLinkedin:hover{
-  color: #0072b1;
+  color:#c38a5b;
   }
   
   .faInstagram:hover{
-  color: #C13584;
+  color: #c38a5b;
   }
 
   .color-footer{  
-    background: linear-gradient(to right ,#D856E0, #8A29A0,  #31064D);
+    background: linear-gradient(to right ,#AC9786, #AC9786, #AC9786);
+  }
+  .site-footer{
+    font-size: 14px;
+    color: #ffffff;
+    padding: 70px 0;
+  }
+  .margin{
+    
+    margin-top: 10px;
+    margin-bottom: 1rem;
+
   }
