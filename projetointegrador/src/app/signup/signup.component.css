@@ -13,3 +13,8 @@
 .txt{
     font-family: 'Itim', cursive;
 }
+
+.botao-estilo {
+    box-shadow: 5px 10px #AC9786;
+  }
+  
