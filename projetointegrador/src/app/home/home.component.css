@@ -1,6 +1,5 @@
 .parallax {
-  background-image: url("/assets/img/learning1.jpg");
-  opacity: 0.8;
+  background-image: url("/assets/img/foto2.jpeg");
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -14,7 +13,7 @@ h1 {
 }
 
 .paralax {
-  background-image: url("/assets/img/learning2.jpg");
+  background-image: url("/assets/img/learning3.jpg");
   opacity: 0.8;
   min-height: 500px;
   background-attachment: fixed;
@@ -24,7 +23,11 @@ h1 {
 }
 
 .botao-estilo {
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px #AC9786;
+}
+
+.botao-estilo:hover{
+  color: #AC9786;
 }
 
 .posiCard {
@@ -40,4 +43,20 @@ h1 {
   top: 145px;
   left: 255px;
   font-size: 40px;
+}
+
+.colorCard1{
+  background: #D8963B;
+}
+
+.colorCard2{
+  background: #637F57;
+}
+
+.colorCard3{
+  background: #77B8E8;
+}
+
+.bodycard{
+  opacity: 1.8;
 }

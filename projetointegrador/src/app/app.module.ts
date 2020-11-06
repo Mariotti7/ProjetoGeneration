@@ -9,6 +9,11 @@ import { FooterComponent } from './footer/footer.component';
 import{FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent} from './signup/signup.component';
+import { AcessoComponent } from './acesso/acesso.component';
+import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
+import { ConteudoComponent } from './conteudo/conteudo.component';
+import { PublicacaoComponent } from './publicacao/publicacao.component';
+
 
 
 
@@ -19,13 +24,18 @@ import { SignupComponent} from './signup/signup.component';
     NavbarComponent,
     FooterComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    AcessoComponent,
+    PerfilLateralComponent,
+    ConteudoComponent,
+    PublicacaoComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
