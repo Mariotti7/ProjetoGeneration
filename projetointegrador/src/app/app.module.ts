@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { AcessoComponent } from './acesso/acesso.component';
 import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
 import { ConteudoComponent } from './conteudo/conteudo.component';
 import { PublicacaoComponent } from './publicacao/publicacao.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -34,7 +36,9 @@ import { PublicacaoComponent } from './publicacao/publicacao.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule
     
   ],
   providers: [],
