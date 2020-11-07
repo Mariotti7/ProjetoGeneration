@@ -35,15 +35,7 @@ export class SignupComponent implements OnInit {
         alert("Cadastro efetuado com sucesso!")
       }) 
     } else {
-      if(this.senha != this.usuario.senha){
-        alert("As senhas digitadas precisam ser iguais")
-      }
-      if(this.usuario.nome.length < 3 || this.usuario.nome.length >99){
-        alert('O nome precisa ter entre 3 e 100 caracteres')
-      }
-      if(this.usuario.email.length < 3 || this.usuario.email.length >99){
-        alert('O email precisa ter entre 3 e 100 caracteres')
-      }
+      alert('O cadastro não pode ser efetuado, verifique os dados digitados. Nome e email precisam ter entre 3 e 100 caracteres. As senhas digitadas tem que ser iguais')
     }
   }
 }

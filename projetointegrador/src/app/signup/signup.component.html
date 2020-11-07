@@ -11,16 +11,19 @@
                   <label for="nome">Nome</label>
                   <input type="text" class="form-control" id="nome"
                   placeholder="Digite Seu nome" [(ngModel)]='usuario.nome'>
+                  <small id="nomeHelp" class="form-text text-muted">Mínimo 3 caracteres, máximo 100</small>
               </div>
               <div class="form-group">
                   <label for="email">Email</label>
                   <input type="email" class="form-control" id="email"
                   placeholder="nome@exemplo.com" [(ngModel)]='usuario.email'>
+                  <small id="emailHelp" class="form-text text-muted">Máximo 100 caracteres</small>
               </div>
               <div class="form-group">
                   <label for="senha">Senha</label>
                   <input type="password" class="form-control" id="senha"
                   placeholder="Digite Sua Senha" (input)='conferirSenha($event)' value='{{senha}}'>
+                  <small id="emailHelp" class="form-text text-muted">Mínimo 8 caracteres, máximo 100</small>
               </div>
               <div class="form-group">
                   <label for="senhaConf">Confirmar Senha</label>

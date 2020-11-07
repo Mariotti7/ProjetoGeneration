@@ -9,24 +9,43 @@
       <li class="nav-item ">
         <a class="nav-link" routerLink='/home'>HOME <span class="sr-only">(página atual)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink='/login'>LOGIN</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink='/signup'>REGISTRAR</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink='/acesso'>ACESSO</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink='/conteudo'>CONTEUDO</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink='/publicacao'>PUBLICAÇÃO</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">SAIR</a>
-      </li>
+
+      <div *ngIf='authService.btnLogin()'>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/login'>LOGIN</a>
+        </li>
+      </div>
+
+      <div *ngIf='authService.btnLogin()'>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/signup'>REGISTRAR</a>
+        </li>
+      </div>
+
+      <div *ngIf='authService.btnSair()'>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/acesso'>ACESSO</a>
+        </li>
+      </div>
+      
+      <div *ngIf='authService.btnSair()'>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/conteudo'>CONTEÚDO</a>
+        </li>
+      </div>
+      
+      <div *ngIf='authService.btnSair()'>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/publicacao'>PUBLICAÇÃO</a>
+        </li>
+      </div>
+
+      <div *ngIf='authService.btnSair()'>
+        <li class="nav-item">
+          <a class="nav-link" (click)='sair()'>SAIR</a>
+        </li>
+      </div>
+      
       </ul>
   </div>
 </nav>
