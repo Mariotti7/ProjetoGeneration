@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faInfo } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-publicacao',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./publicacao.component.css']
 })
 export class PublicacaoComponent implements OnInit {
+
+  faInfo = faInfo;
 
   constructor() { }
 

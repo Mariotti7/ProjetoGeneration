@@ -7,42 +7,42 @@
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto d-flex justify-content-center">
       <li class="nav-item ">
-        <a class="nav-link" routerLink='/home'>HOME <span class="sr-only">(página atual)</span></a>
+        <a class="nav-link txt" routerLink='/home'>HOME <span class="sr-only">(página atual)</span></a>
       </li>
 
       <div *ngIf='authService.btnLogin()'>
         <li class="nav-item">
-          <a class="nav-link" routerLink='/login'>LOGIN</a>
+          <a class="nav-link txt" routerLink='/login'>LOGIN</a>
         </li>
       </div>
 
       <div *ngIf='authService.btnLogin()'>
         <li class="nav-item">
-          <a class="nav-link" routerLink='/signup'>REGISTRAR</a>
+          <a class="nav-link txt" routerLink='/signup'>REGISTRAR</a>
         </li>
       </div>
 
       <div *ngIf='authService.btnSair()'>
         <li class="nav-item">
-          <a class="nav-link" routerLink='/acesso'>ACESSO</a>
+          <a class="nav-link txt" routerLink='/acesso'>ACESSO</a>
         </li>
       </div>
       
       <div *ngIf='authService.btnSair()'>
         <li class="nav-item">
-          <a class="nav-link" routerLink='/conteudo'>CONTEÚDO</a>
+          <a class="nav-link txt" routerLink='/conteudo'>CONTEÚDO</a>
         </li>
       </div>
       
       <div *ngIf='authService.btnSair()'>
         <li class="nav-item">
-          <a class="nav-link" routerLink='/publicacao'>PUBLICAÇÃO</a>
+          <a class="nav-link txt" routerLink='/publicacao'>PUBLICAÇÃO</a>
         </li>
       </div>
 
       <div *ngIf='authService.btnSair()'>
         <li class="nav-item">
-          <a class="nav-link" (click)='sair()'>SAIR</a>
+          <a class="nav-link txt" (click)='sair()'>SAIR</a>
         </li>
       </div>
       

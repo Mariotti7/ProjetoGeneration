@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,15 @@ import { Injectable } from '@angular/core';
 })
 export class UsuarioService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
+
+  token = {
+    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+  }
+  getUsuarioByEmail(){
+    
+    return this.http.get(`http://localhost:9000/email/${localStorage.getItem('email')}`, this.token)
+  }
 }

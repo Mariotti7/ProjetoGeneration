@@ -1,43 +1,42 @@
 ul.social-network {
   list-style: none;
   display: inline;
-
   padding: 0;
 }
-
 ul.social-network li {
   display: inline;
   margin: 0;
   padding: 5px;
 }
-
-.faFacebook, .faLinkedin, .faInstagram{
-    color:#ffffff;
+.faFacebook,
+.faLinkedin,
+.faInstagram {
+  color: #ffffff;
 }
-
-.faFacebook:hover{
-  color: #c38a5b;
+.faFacebook:hover {
+  color: black;
 }
-
-.faLinkedin:hover{
-color:#c38a5b;
+.faLinkedin:hover {
+  color: black;
 }
-
-.faInstagram:hover{
-color: #c38a5b;
+.faInstagram:hover {
+  color: black;
 }
-
-.color-footer{  
-  background: #637F57;
+.color-footer {
+  background: #23272b;
 }
-.site-footer{
+.site-footer {
   font-size: 14px;
   color: #ffffff;
   padding: 70px 0;
 }
-.margin{
-  
+.margin {
   margin-top: 10px;
   margin-bottom: 1rem;
-
+}
+.txt {
+  font-family: "Mulish", sans-serif;
+}
+.link-color {
+  color: #ffffff;
 }

@@ -1,6 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap");
 
+.txt {
+  font-family: "Mulish", sans-serif;
+}
+.txt-color {
+  color: #ffffff;
+}
 .parallax {
   background-image: url("/assets/img/foto2.jpeg");
   min-height: 500px;
@@ -26,11 +32,11 @@ h1 {
 }
 
 .botao-estilo {
-  box-shadow: 5px 10px #AC9786;
+  box-shadow: 5px 10px #ac9786;
 }
 
-.botao-estilo:hover{
-  color: #AC9786;
+.botao-estilo:hover {
+  color: #ac9786;
 }
 
 .posiCard {
@@ -48,24 +54,23 @@ h1 {
   font-size: 40px;
 }
 
-.colorCard1{
-  background: #D8963B;
+.colorCard1 {
+  background: #d8963b;
 }
 
-.colorCard2{
-  background: #637F57;
+.colorCard2 {
+  background: #637f57;
 }
 
-.colorCard3{
-  background: #77B8E8;
+.colorCard3 {
+  background: #77b8e8;
 }
 
-.bodycard{
+.bodycard {
   opacity: 1.8;
 }
 
-.ptext{
+.ptext {
   font-size: 15pt;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-

@@ -1,3 +1,4 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,6 +13,6 @@ export class PerfilLateralComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.nome = 'Fulano'
+    this.nome = localStorage.getItem('nome')
   }
 }
