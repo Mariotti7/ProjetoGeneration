@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap');
+
+
 #b-sg {
     position: relative;
     -ms-flex-align: center;
@@ -36,3 +39,9 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+
+
+  .txt{
+    font-family: 'Mulish', sans-serif;
+  }
+  

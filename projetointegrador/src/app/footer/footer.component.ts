@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faFacebook, faInstagram} from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import { faGithub} from '@fortawesome/free-brands-svg-icons'
+import { faVoicemail } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-footer',
@@ -14,6 +15,7 @@ export class FooterComponent implements OnInit {
   faLinkedin = faLinkedin
   faGithub = faGithub
   faFacebook = faFacebook
+  faEmail = faVoicemail
 
   constructor() { }
 

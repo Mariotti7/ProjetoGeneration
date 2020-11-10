@@ -4,11 +4,11 @@
       <div class="container" id="b-sg">
         <div class="row">
           <div class="col-md-6 text-center" >
-            <h3 id="login">Área de Acesso</h3>
+            <h3 id="login" class="txt font-weight-bold">Área de Acesso</h3>
             <form class="form-signin">
               <img class="mb-4" src="./assets/img/logo3.png" style="border-radius: 10px; box-shadow: 5px 10px #888888;" alt width="72" height="72" />
-              <h1 class="h3 mb-3 font-weight-normal">Faça Login</h1>
-              <label for="inputEmail" class="sr-only">Usuário Email</label>
+              <h1 class="h3 mb-3 font-weight-normal txt">Faça Login</h1>
+              <label for="inputEmail" class="sr-only txt">Usuário Email</label>
               <input
                 type="email"
                 id="inputEmail"
@@ -25,18 +25,11 @@
                 placeholder="Senha"
                 required
               />
-              <div class="checkbox mb-3">
-                <label>
-                  <input type="checkbox" value="lembrar" />
-                  "Lembrar"
-                  <div class="txt-erro"></div>
-                </label>
-              </div>
-              <a href="">Ainda não é um membro? Registre-se</a> <i class="fa fa-unlock" aria-hidden="true"></i>
-              <button class="btn btn-warning btn-dark btn-block font-weight-bold" style="box-shadow: 5px 5px #888888" type="submit">
+              <a routerLink="/singup" class="txt">Ainda não é um membro? Registre-se</a> 
+              <button class="btn btn-warning btn-dark btn-block font-weight-bold txt" style="box-shadow: 5px 5px #888888" type="submit">
                 ENTRAR
               </button>
-              <p class="mt-5 mb-3 text-muted text-center">© 2020-2021</p>
+              <p class="mt-5 mb-3 text-muted text-center txt">© 2020-2021</p>
             </form>
           </div>
           <div class="col-md-6"> <img src="/assets/img/joinUs.jpg"  alt="join" style="border-radius: 20pt; height: 427px; width: 427px;"></div>

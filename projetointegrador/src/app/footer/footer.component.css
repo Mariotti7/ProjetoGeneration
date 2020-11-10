@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap');
+
 ul.social-network {
   list-style: none;
   display: inline;
@@ -16,19 +18,19 @@ ul.social-network li {
 }
 
 .faFacebook:hover{
-  color: #c38a5b;
+  color: black;
 }
 
 .faLinkedin:hover{
-color:#c38a5b;
+color: black;
 }
 
 .faInstagram:hover{
-color: #c38a5b;
+color: black;
 }
 
 .color-footer{  
-  background: #637F57;
+  background: #23272B;
 }
 .site-footer{
   font-size: 14px;
@@ -40,4 +42,14 @@ color: #c38a5b;
   margin-top: 10px;
   margin-bottom: 1rem;
 
+}
+
+.txt{
+  font-family: 'Mulish', sans-serif;
+}
+
+
+.link-color{
+
+  color: #ffffff;
 }

@@ -3,57 +3,58 @@
       <div class="col-md-4">
         
         <app-perfil-lateral></app-perfil-lateral>
-        <h3 class="text-center mt-3 mb-3 font-weight-bold">ESCOLHA UMA CATEGORIA</h3>
       </div>
       <!--VIDEOS-->
+      <div class="col-md-8">
+        
+
+      <div class="row d-flex align-items-end">
+        <div class="col-md-6">
+          <div class="form-group m-0">
+            <label class="txt" for="tema"
+              >Escolha um Curso ou
+              <a routerLink="/publicacao">Cadastre um novo</a></label
+            >
+            <select name="categoria" id="categoria" class="form-control">
+              <option class="text-muted">
+                Escolha uma categoria
+              </option>
+              <option>
+                Lógica de Programação
+              </option>
+              <option>
+                Raciocínio Lógico
+              </option>
+              <option>
+                Culinária
+              </option>
+              <option>
+                Música
+              </option>
+              <option>
+                Idiomas
+              </option>
+              <option>
+                Comunicação
+              </option>
+            
+            </select>
+            <select name="curso" id="curso" class="form-control mt-3">
+              <option>
+                Curso
+              </option>
+            </select>
+          </div>
+          <div class="col-md-6 d-flex justify-content-right">
+            <a routerLink="/curso"> <button type="button" class="btn btn-dark btn-lg w-100 mt-3 mr-3 txt">
+              Assistir
+            </button></a>
+          </div>
+          <!--videos -->
+         
+        </div>
+
       
-     <div class="col-md-12 text-center d-flex justify-content-center">
-        <div class="card-group">
-            <div class="card">
-                <iframe width="368" height="300" src="https://www.youtube.com/embed/8mei6uVttho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <div class="card-body">
-                <h3 class="card-title">Lógica De Programação</h3>
-                
-              </div>
-            </div>
-            <div class="card">
-                <iframe width="368" height="300" src="https://www.youtube.com/embed/OceeNw3_ijI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <div class="card-body">
-                <h3 class="card-title">Música</h3>
-              </div>
-            </div>
-            <div class="card">
-                <iframe width="368" height="300" src="https://www.youtube.com/embed/0Yr8xnNXvEA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <div class="card-body">
-                <h3 class="card-title">Idiomas</h3>
-              </div>
-            </div>
-          </div>
-          
-     </div>
-      <!--VIDEOS-->
-      <div class="col-md-12 mt-3 mb-3 text-center d-flex justify-content-center">
-        <div class="card-group">
-            <div class="card">
-                <iframe width="368" height="300" src="https://www.youtube.com/embed/C8LOhTZg6Qw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <div class="card-body">
-                <h3 class="card-title">Raciocínio Lógico</h3>
-              </div>
-            </div>
-            <div class="card">
-                <iframe width="368" height="300" src="https://www.youtube.com/embed/JUDO6_lewzw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <div class="card-body">
-                <h3 class="card-title">Comunicação</h3>
-              </div>
-            </div>
-            <div class="card">
-                <iframe width="368" height="300" src="https://www.youtube.com/embed/AJ7tUzrrJD8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <div class="card-body">
-                <h3 class="card-title">Culinária</h3>
-              </div>
-            </div>
-          </div>
-      </div>
       <!--VIDEOS-->
     </div>
   </div>

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Mulish:wght@300&display=swap');
+
 
 .parallax {
   background-image: url("/assets/img/foto2.jpeg");
@@ -13,6 +15,7 @@
 .parallax p.color-txt,
 h1 {
   color: #ffffff;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .paralax {
@@ -34,7 +37,7 @@ h1 {
 }
 
 .posiCard {
-  bottom: 32px;
+  bottom: 25px;
 }
 
 .txtSize {
@@ -66,6 +69,13 @@ h1 {
 
 .ptext{
   font-size: 15pt;
-  font-family: 'Roboto', sans-serif;
 }
 
+.txt{
+  font-family: 'Mulish', sans-serif;
+}
+
+.txt-color{
+  color: #ffffff;
+ 
+}

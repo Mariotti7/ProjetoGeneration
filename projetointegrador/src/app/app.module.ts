@@ -13,6 +13,7 @@ import { AcessoComponent } from './acesso/acesso.component';
 import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
 import { ConteudoComponent } from './conteudo/conteudo.component';
 import { PublicacaoComponent } from './publicacao/publicacao.component';
+import { CursoComponent } from './curso/curso.component';
 
 
 
@@ -28,7 +29,8 @@ import { PublicacaoComponent } from './publicacao/publicacao.component';
     AcessoComponent,
     PerfilLateralComponent,
     ConteudoComponent,
-    PublicacaoComponent
+    PublicacaoComponent,
+    CursoComponent
 
   ],
   imports: [
