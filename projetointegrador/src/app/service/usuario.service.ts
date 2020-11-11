@@ -15,6 +15,6 @@ export class UsuarioService {
   }
   getUsuarioByEmail(){
     
-    return this.http.get(`http://localhost:9000/email/${localStorage.getItem('email')}`, this.token)
+    return this.http.get(`http://localhost:8080/usuario/email/${localStorage.getItem('email')}`, this.token)
   }
 }

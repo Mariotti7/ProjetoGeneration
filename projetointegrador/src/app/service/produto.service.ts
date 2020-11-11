@@ -14,11 +14,18 @@ export class ProdutoService {
   token = {
     headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
   }
-  getAllPostagens(){
-    return this.http.get('http://localhost:9000/produto', this.token)
+  getAllProduto(){
+    return this.http.get('http://localhost:8080/produto', this.token)
   }
 
-  postPostagem(produto: Produto){
-    return this.http.post('http://localhost:9000/produto', produto, this.token)
+  postProduto(produto: Produto){
+    return this.http.post('http://localhost:8080/produto', produto, this.token)
+  }
+
+  getAllProdutoByCategoria(id:number){
+    return this.http.get(`http://localhost:8080/produto/categoria/${id}`, this.token)
+  }
+  getByIdProduto(id: number){
+    return this.http.get(`http://localhost:8080/produto/${id}`, this.token)
   }
 }

@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faInfo } from '@fortawesome/free-solid-svg-icons';
+import { Categoria } from '../model/Categoria';
+import { Produto } from '../model/Produto';
+import { Usuario } from '../model/Usuario';
+import { CategoriaService } from '../service/categoria.service';
+import { ProdutoService } from '../service/produto.service';
+import { UsuarioService } from '../service/usuario.service';
 
 @Component({
   selector: 'app-publicacao',
@@ -8,12 +15,65 @@ import { faInfo } from '@fortawesome/free-solid-svg-icons';
 })
 export class PublicacaoComponent implements OnInit {
 
-  faInfo = faInfo;
+  key: 'data'
+  reverse = true
+  faInfo = faInfo
 
-  constructor() { }
+  produto: Produto = new Produto()
+  listaProdutos: Produto[]
+
+  categoria: Categoria = new Categoria()
+  listaCategorias: Categoria[]
+  idCategoria: number
+
+  usuario: Usuario = new Usuario
+  emailUsuario: string
+
+  constructor(
+    private produtoService: ProdutoService,
+    private categoriaService: CategoriaService,
+    private usuarioService: UsuarioService,
+    private router: Router
+  ) { }
 
   ngOnInit(){
     window.scroll(0,0)
+    this.findUsuarioByEmail()
+    this.findAllCategorias()
   }
 
+  findAllCategorias(){
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+      this.listaCategorias = resp
+    })
+  }
+
+  findByIdCategoria(){
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+      this.categoria = resp
+    })
+  }
+
+  findUsuarioByEmail(){
+    this.usuarioService.getUsuarioByEmail().subscribe((resp: Usuario) => {
+      this.usuario = resp
+    })
+  }
+
+  publicar(){
+    this.categoria.id = this.idCategoria
+    this.produto.categoria = this.categoria
+    this.produto.criador = this.usuario
+
+    if(this.produto.nome == null || this.produto.descricao == null || this.produto.link == null || this.produto.categoria == null){
+      alert('Preencha todos os campos corretamente antes de publicar!')
+    } else{
+      this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+        this.produto = resp
+        this.produto = new Produto()
+        alert('Curso realizada com sucesso!')
+        this.router.navigate(['/conteudo'])
+      })
+    }
+  }
 }

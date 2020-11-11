@@ -15,15 +15,15 @@ export class CategoriaService {
     headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
   }
 
-  getAllTemas(){
-    return this.http.get('http://localhost:9000/categoria', this.token)
+  getAllCategoria(){
+    return this.http.get('http://localhost:8080/categoria', this.token)
   }
 
-  getByIdTema(id: number){
-    return this.http.get(`http://localhost:9000/categoria/${id}`, this.token)
+  getByIdCategoria(id: number){
+    return this.http.get(`http://localhost:8080/categoria/${id}`, this.token)
   }
 
-  postTema(categoria: Categoria){
-    return this.http.post('http://localhost:9000/categoria', categoria, this.token)
+  postCategoria(categoria: Categoria){
+    return this.http.post('http://localhost:8080/categoria', categoria, this.token)
   }
 }
