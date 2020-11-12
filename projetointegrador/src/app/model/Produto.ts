@@ -1,3 +1,4 @@
+import { SafeResourceUrl } from '@angular/platform-browser';
 import { Categoria } from './Categoria';
 import { Usuario } from './Usuario';
 
@@ -8,4 +9,5 @@ export class Produto {
     public link: string;
     public categoria: Categoria;
     public criador: Usuario;
+    public urlSafe: SafeResourceUrl
 }

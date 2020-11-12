@@ -16,6 +16,7 @@ import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.componen
 import { ConteudoComponent } from './conteudo/conteudo.component';
 import { PublicacaoComponent } from './publicacao/publicacao.component';
 import { CursoComponent } from './curso/curso.component';
+import { MeuCursoComponent } from './meu-curso/meu-curso.component';
 
 
 
@@ -32,7 +33,8 @@ import { CursoComponent } from './curso/curso.component';
     PerfilLateralComponent,
     ConteudoComponent,
     PublicacaoComponent,
-    CursoComponent
+    CursoComponent,
+    MeuCursoComponent
 
   ],
   imports: [

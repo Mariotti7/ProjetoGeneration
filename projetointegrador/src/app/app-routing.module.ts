@@ -7,6 +7,7 @@ import { SignupComponent} from './signup/signup.component';
 import { ConteudoComponent } from './conteudo/conteudo.component';
 import { PublicacaoComponent } from './publicacao/publicacao.component';
 import { CursoComponent } from './curso/curso.component';
+import { MeuCursoComponent } from './meu-curso/meu-curso.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'acesso', component: AcessoComponent},
   { path: 'conteudo', component: ConteudoComponent},
   { path: 'publicacao', component: PublicacaoComponent},
-  {path: 'curso', component: CursoComponent}
+  {path: 'curso/:id', component: CursoComponent},
+  {path: 'meu-curso', component: MeuCursoComponent}
 ];
 
 @NgModule({

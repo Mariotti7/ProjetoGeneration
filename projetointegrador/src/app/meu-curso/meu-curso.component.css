@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap");
+.txt {
+  font-family: "Mulish", sans-serif;
+}
+.color {
+  text-emphasis: none;
+  text-decoration: none;
+  color: #fff;
+}
+.botao-estilo {
+  box-shadow: 4px 4px #c2b9b2;
+}
