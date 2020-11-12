@@ -12,10 +12,34 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   logar(userLogin:UsuarioLogin){
-    return this.http.post('http://localhost:8080/usuario/logar', userLogin)
+    return this.http.post('http://localhost:8082/usuario/logar', userLogin)
   }
 
   cadastrar(usuario: UsuarioModelo){
-    return this.http.post('http://localhost:9001/usuario/cadastrar', usuario)
+    return this.http.post('http://localhost:8082/usuario/cadastrar', usuario)
   }
-}
+
+  btnSair(){
+    let ok = false
+    let token = localStorage.getItem('token')
+
+    if(token != null){
+      ok = true
+    }
+    return ok
+    }
+
+    
+  btnLogin(){
+    let ok = false
+    let token = localStorage.getItem('token')
+
+    if(token == null){
+      ok = true
+    }
+    return ok
+    }
+
+  }
+
+

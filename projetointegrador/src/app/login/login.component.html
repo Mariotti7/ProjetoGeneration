@@ -13,24 +13,17 @@
                 type="email"
                 id="inputEmail"
                 class="form-control"
-                placeholder="Usuário Email"
-              />
+                name="inputEmail"
+                placeholder="Usuário Email" [(ngModel)]='userLogin.email'/>
               <label for="inputPassword" class="sr-only">Senha</label>
               <input
                 type="password"
                 id="inputPassword"
                 class="form-control"
-                placeholder="Senha"
-              />
-              <div class="checkbox mb-3">
-                <label>
-                  <input type="checkbox" value="lembrar" />
-                  "Lembrar"
-                  <div class="txt-erro"></div>
-                </label>
-              </div>
+                name="inputPassword"
+                placeholder="Senha" [(ngModel)]='userLogin.senha'/>
               <a href="">Ainda não é um membro? Registre-se</a> <i class="fa fa-unlock" aria-hidden="true"></i>
-              <button class="btn btn-warning btn-dark btn-block font-weight-bold" style="box-shadow: 5px 5px #888888" type="submit">
+              <button class="btn btn-warning btn-dark btn-block font-weight-bold" style="box-shadow: 5px 5px #888888" type="submit" (click)='entrar()'>
                 ENTRAR
               </button>
               <p class="mt-5 mb-3 text-muted text-center">© 2020-2021</p>
