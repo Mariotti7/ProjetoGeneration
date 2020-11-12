@@ -1,6 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap");
+
+.txt {
+  font-family: "Mulish", sans-serif;
+}
+.txt-color {
+  color: #ffffff;
+}
 .parallax {
-  background-image: url("/assets/img/puzzle.png");
-  opacity: 0.8;
+  background-image: url("/assets/img/foto2.jpeg");
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -14,7 +22,7 @@ h1 {
 }
 
 .paralax {
-  background-image: url("/assets/img/puzzle.png");
+  background-image: url("/assets/img/learning3.jpg");
   opacity: 0.8;
   min-height: 500px;
   background-attachment: fixed;
@@ -24,7 +32,11 @@ h1 {
 }
 
 .botao-estilo {
-  box-shadow: 5px 10px #888888;
+  box-shadow: 4px 4px #c2b9b2;
+}
+
+.botao-estilo:hover {
+  color: #ac9786;
 }
 
 .posiCard {
@@ -40,4 +52,25 @@ h1 {
   top: 145px;
   left: 255px;
   font-size: 40px;
+}
+
+.colorCard1 {
+  background: #d8963b;
+}
+
+.colorCard2 {
+  background: #637f57;
+}
+
+.colorCard3 {
+  background: #77b8e8;
+}
+
+.bodycard {
+  opacity: 1.8;
+}
+
+.ptext {
+  font-size: 15pt;
+  font-family: "Roboto", sans-serif;
 }

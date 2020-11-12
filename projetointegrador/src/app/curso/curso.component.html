@@ -1,0 +1,39 @@
+<div class="container d-flex justify-content-center">
+    <div class="col-md-8">
+      <h3 class="text-center mb-4 txt font-weight-bold">VIDEO AULA</h3>
+    </div>
+  </div>
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-md-6">
+        <h5 id="quemsomos" class="txt font-weight-bold mt-4">Nome do Curso</h5>
+          <p class="txt ptext">
+            {{nomeCurso}}
+          </p>
+          
+          <h5 id="quemsomos" class="txt font-weight-bold">Categoria</h5>
+        <p class="txt ptext">
+          {{categoriaCurso}}
+        </p>
+          
+        <h5 id="quemsomos" class="txt font-weight-bold">Descrição</h5>
+        <p class="txt ptext">
+          {{descricaoCurso}}
+        </p>
+        <h5 id="quemsomos" class="txt font-weight-bold">Criador do Curso</h5>
+          <p class="txt ptext">
+            {{criadorCurso}}
+          </p>
+      </div>
+      <div class="col-md-6 mb-3">
+        <iframe
+          width="560"
+          height="335"
+          [src]="produto.urlSafe"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>

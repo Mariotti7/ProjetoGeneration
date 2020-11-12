@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row mt-5 mb-5">
+      <div class="col-md-4">
+        <app-perfil-lateral></app-perfil-lateral>
+      </div>
+      <div class="col-md-8">
+        <h3 class="text-center mb-4 txt font-weight-bold">Cadastre um Curso </h3>
+        <div class="form-group">
+          <label class="txt" for="nome">Nome do Curso</label>
+          <input type='text' class="form-control" id="nome" rows="3" placeholder="Exemplo: Aulas de Algoritmos" [(ngModel)]='produto.nome' name='nome'>
+      </div>
+        <div class="form-group">
+          <label class="txt" for="categoria">Selecione uma categoria:</label>
+          <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
+            <option *ngFor='let item of listaCategorias' value="{{item.id}}">
+              {{item.descricao}}
+          </option>
+          </select>
+      </div>
+      <div class="form-group">
+        <label class="txt" for="descricao">Descreva brevemente o que o curso irá ensinar:</label>
+        <input class="form-control" id="descricao" rows="3" placeholder="Exemplo: Introdução a Algoritmos" [(ngModel)]='produto.descricao' name='descricao'>
+    </div>
+    <div class="form-group">
+      <label class="txt" for="link">Insira o link da playlist do seu curso hospedado no Youtube: <a href="https://support.google.com/youtube/answer/171780?hl=pt-BR" target="_blank"><fa-icon [icon]="faInfo" class="faInfo pl-3 "></fa-icon></a></label>
+      <input class="form-control" id="link" rows="3" placeholder="Incorpore uma playlist do Youtube" [(ngModel)]='produto.link' name="link">
+  </div>
+      <div class="row mb-5">
+        <div class="col-md-12 d-flex justify-content-center">
+          <button class="btn btn-dark w-25 txt botao-estilo text-uppercase" (click)='publicar()'>Cadastrar</button>
+        </div>
+      </div>
+      
+      </div>
+  </div>
+</div>
