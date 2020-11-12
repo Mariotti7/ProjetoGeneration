@@ -8,14 +8,14 @@
       </h1>
     </div>
   </div>
-  <div class="card" style="width: 18rem">
+  <div class="card ml-3" style="width: 18rem">
     <div class="card-body">
       <h3 class="card-title font-weight-bold txt ">DONATE SKILLS</h3>
       <p class="card-text txt">
         Uma comunidade brasileira de aprendizagem online para pessoas que
         desejam aprender, ensinar e se divertir.
       </p>
-      <a href="#aulas" class="btn btn-dark">EXPLORE</a>
+      <a href="#aulas" class="btn btn-dark botao-estilo">EXPLORE</a>
       <hr>
     </div>
   </div>
@@ -23,44 +23,40 @@
 </div>
 
 <!--CARDS COM OS OBJETIVOS-->
-<div class="container d-flex justify-content-center">
-  <div
-    class="card text-white colorCard1 mr-3 mb-3 posiCard"
-    style="max-width: 22rem"
-  > <img src="/assets/img/aprenda.png" style="height: 72px; width: 72px; padding-left: 20px;" alt="">
+<div class="container d-flex justify-content-center mb-3">
+<div class="card-deck">
+  <div class="card colorCard1 posiCard">
+    <img class="card-img-top" src="/assets/img/aprenda.png" style="height: 72px; width: 72px; padding-left: 20px;">
     <div class="card-header txt font-weight-bold">APRENDA</div>
-    <div class="card-body bodycard txt">
-      <h5 class="card-title ">O QUE É?</h5>
-      <p class="card-text ">
+    <div class="card-body">
+      <h5 class="card-title font-weight-bold">O QUE É?</h5>
+      <p class="card-text"> Passar a ter conhecimento sobre; instruir-se: aprender um novo idioma.</p>
+      
+    </div>
+  </div>
+  <div class="card colorCard2 posiCard">
+    <img src="/assets/img/ensine.png" style="height: 72px; width: 72px; padding-left: 20px;">
+    <div class="card-header txt font-weight-bold">ENSINE</div>
+    <div class="card-body">
+      <h5 class="card-title font-weight-bold">O QUE É?</h5>
+      <p class="card-text">
         Passar a ter conhecimento sobre; instruir-se: aprender um novo idioma.
       </p>
     </div>
   </div>
-  <div
-    class="card text-white colorCard2 mr-3 mb-3 posiCard"
-    style="max-width: 22rem"
-  > <img src="/assets/img/ensine.png" style="height: 72px; width: 72px; padding-left: 20px;" alt="">
-    <div class="card-header txt font-weight-bold">ENSINE</div>
-    <div class="card-body txt">
-      <h5 class="card-title">O QUE É?</h5>
-      <p class="card-text ">
-        Transmitir conhecimento sobre alguma coisa a alguém; lecionar; Dar instruções sobre alguma coisa a alguém.
-      </p>
-    </div>
-  </div>
-  <div
-    class="card text-white colorCard3 mb-3 posiCard"
-    style="max-width: 22rem"
-  > <img src="/assets/img/divertir.png" style="height: 72px; width: 72px; padding-left: 20px;" alt="">
+  <div class="card colorCard3 posiCard">
+    <img src="/assets/img/divertir.png" style="height: 72px; width: 72px; padding-left: 20px;">
     <div class="card-header txt font-weight-bold">DIVIRTA-SE</div>
-    <div class="card-body txt">
-      <h5 class="card-title">O QUE É?</h5>
+    <div class="card-body">
+      <h5 class="card-title font-weight-bold">O QUE É?</h5>
       <p class="card-text">
         Distrair, entreter, recrear. Aqueles que decidiram enfrentar a chuva para se divertir acabaram se concentrando em frente ao palco.
       </p>
     </div>
   </div>
 </div>
+</div>
+
 
 <!--O QUE OFERECEMOS-->
 <div class="jumbotron jumbotron-fluid text-center bg-dark">
@@ -81,7 +77,6 @@
         <div class="card-body txt">
          <a routerLink='/login'><h3 class="card-title font-weight-bold  ">Raciocínio Lógico</h3></a> 
           <p class="card-text">O raciocínio lógico está ligado a conceitos capazes de organizar e clarear as situações cotidianas, preparando os jovens para circunstâncias mais complexas. De acordo com o Construtivismo (Piaget), a Matemática ensinada através da imposição de fórmulas, exercícios repetitivos e conceitos limitados, impossibilitam o aprendizado, gerando alunos passivos, desinteressados e com falta de criatividade.</p>
-          <p class="card-text"><small class="text-muted">Atualizados em 2020</small></p>
         </div>
       </div>
       <div class="card">
@@ -89,7 +84,6 @@
         <div class="card-body txt">
           <a routerLink='/login'><h3 class="card-title font-weight-bold ">Idiomas</h3></a>
           <p class="card-text">Este é um card com suporte a texto embaixo, que funQualquer hora é uma boa hora para aprender (ou melhorar) um idioma. Bem-vindos ao meu mundo de idiomas. Acredito que as pessoas valem o dobro, o triplo, muito mais, porque conhecem 2 ou mais idiomas.</p>
-          <p class="card-text"><small class="text-muted">Atualizados em 2020</small></p>
         </div>
       </div>
       <div class="card">
@@ -97,7 +91,6 @@
         <div class="card-body txt">
           <a routerLink='/login'> <h3 class="card-title font-weight-bold ">Comunicação</h3></a>
           <p class="card-text">A comunicação efetiva está entre as mais importantes habilidades de um profissional. E não por acaso, pois é através do bom desenvolvimento da capacidade de comunicar-se e, consequentemente de relacionar-se, que o colaborador desenvolve sua inteligência social e alcança também bons resultados.</p>
-          <p class="card-text"><small class="text-muted">Atualizados em 2020</small></p>
         </div>
       </div>
     </div>
@@ -110,7 +103,6 @@
         <div class="card-body txt">
           <a routerLink='/login'><h3 class="card-title font-weight-bold ">Lógica de Programação</h3></a>
           <p class="card-text">Aprender a programar é ter nas mãos o "poder" de melhorar ou facilitar a vida das pessoas, por meio da criação de softwares e aplicativos que possam resolver problemas reais da sociedade e tornar o mundo um lugar melhor para se viver.</p>
-          <p class="card-text"><small class="text-muted">Atualizados em 2020</small></p>
         </div>
       </div>
       <div class="card mt-3">
@@ -118,7 +110,6 @@
         <div class="card-body txt">
           <a routerLink='/login'><h3 class="card-title font-weight-bold ">Culinária</h3></a>
           <p class="card-text">Os curso de gastronomia ou de culinária podem servir como ponto de encontro entre amigos que querem se ver não só para comer, mas também para aprender a fazer juntos o que estão prestes a degustar.</p>
-          <p class="card-text"><small class="text-muted">Atualizados em 2020</small></p>
         </div>
       </div>
       <div class="card mt-3">
@@ -126,7 +117,6 @@
         <div class="card-body txt">
           <a routerLink='/login'><h3 class="card-title font-weight-bold ">Música</h3></a>
           <p class="card-text">Trabalho em equipe é um aspecto muito importante do sucesso na vida. Tocar um instrumento requer que você trabalhe com outras pessoas para fazer música. Em uma banda ou orquestra, você precisa aprender como cooperar com as pessoas que estão tocando junto com você.</p>
-          <p class="card-text"><small class="text-muted">Atualizados em 2020</small></p>
         </div>
       </div>
     </div>
@@ -136,8 +126,8 @@
 <div class="paralax">
   <div class="row w-100">
     <div class="col-md-12">
-      <h1 class="text-center d-flex justify-content-center p-3 pr-3 txtPosicao font-weight-bold txt">
-       EDUCAÇÃO PARA OS LÍDERES DO AMANHÃ
+    <h1 class="text-center d-flex justify-content-center txtPosicao m-auto font-weight-bold txt">
+       "EDUCAÇÃO PARA OS LÍDERES DO AMANHÃ"
       </h1>
     </div>
   </div>

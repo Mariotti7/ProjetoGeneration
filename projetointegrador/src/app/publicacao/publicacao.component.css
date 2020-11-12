@@ -9,3 +9,8 @@
       text-emphasis: none;
       color: black;
   }
+
+  .botao-estilo {
+    box-shadow: 4px 4px #c2b9b2;
+  }
+  

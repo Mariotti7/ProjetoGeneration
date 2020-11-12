@@ -5,6 +5,12 @@
     font-family: 'Mulish', sans-serif;
   }
   
+  .color{
+      text-emphasis: none;
+      text-decoration: none;
+      color:#fff;
+  }
+
   .botao-estilo {
     box-shadow: 4px 4px #c2b9b2;
   }

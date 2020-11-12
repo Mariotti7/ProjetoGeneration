@@ -29,11 +29,12 @@ h1 {
 }
 
 .botao-estilo {
-  box-shadow: 5px 10px #AC9786;
+  box-shadow: 4px 4px #c2b9b2;
+  
 }
 
 .botao-estilo:hover{
-  color: #AC9786;
+  color: #686564;
 }
 
 .posiCard {
@@ -47,7 +48,7 @@ h1 {
 .paralax h1.txtPosicao {
   position: absolute;
   top: 145px;
-  left: 255px;
+  left: 248px;
   font-size: 40px;
 }
 
