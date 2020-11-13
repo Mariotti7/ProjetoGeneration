@@ -7,27 +7,21 @@
     <div class="col-md-8 mt-5">
     <div class="row d-flex align-items-end">
       <div class="col-md-6">
-        <div class="form-group m-0">
+        <div class="form-group m-0" >
           <label class="txt" for="tema"
             ><h5 class="font-weight-bold">Assista um curso ou
             <a routerLink="/publicacao">Cadastre um novo</a></h5></label>
           <h5 class="mt-3">Selecione uma categoria:</h5>
           <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
-            <option *ngFor='let item of listaCategorias' value="{{item.id}}">
+            <option  *ngFor='let item of listaCategorias' value="{{item.id}}">
               {{item.descricao}}
-          </option>
-          </select>
-          <h5 class='mt-3'>Selecione o curso que deseja assistir</h5>
-          <select name="produto" id="produto" class="form-control" [(ngModel)]='idProduto' (change)='findByIdProduto()'>
-            <option *ngFor='let item of listaProdutos' value="{{item.id}}">
-              {{item.nome}}
           </option>
           </select>
         </div>
         <div class="col-md-6 d-flex justify-content-center">
-          <a routerLink="/curso"> <button type="button" class="mb-3 text-uppercase btn btn-dark btn-lg w-100 mt-4 txt botao-estilo">
-            Assistir
-          </button></a>
+          <button type="button" class="mb-3 text-uppercase btn btn-dark btn-lg w-100 mt-4 txt botao-estilo" (click)='assistir()'>
+            Avançar
+          </button>
         </div>
         <!--videos -->
         

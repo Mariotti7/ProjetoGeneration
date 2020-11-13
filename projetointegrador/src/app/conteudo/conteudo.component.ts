@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { CategoriaService } from '../service/categoria.service';
@@ -11,24 +12,20 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class ConteudoComponent implements OnInit {
 
-  produto: Produto = new Produto()
-  listaProdutos: Produto[]
-  listaProdutos2: Produto[]
-  idProduto: number
-
+  id: number
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
   idCategoria: number
   
   constructor(
     private produtoService: ProdutoService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private router: Router
   ) { }
 
   ngOnInit(){
     window.scroll(0, 0)
     this.findAllCategorias()
-    this.findAllProdutosByCategoria()
   }
 
   findAllCategorias(){
@@ -39,20 +36,15 @@ export class ConteudoComponent implements OnInit {
 
   findByIdCategoria(){
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
-      this.categoria = resp
+    this.categoria = resp
+    this.id = this.categoria.id
     })
   }
-
-  findAllProdutosByCategoria(){
-    this.produtoService.getAllProdutoByCategoria(this.categoria.id).subscribe((resp: Produto[]) => {
-      this.listaProdutos
-    })
-  }
-
-  findByIdProduto(){
-    this.findAllProdutosByCategoria()
-    this.produtoService.getByIdProduto(this.idProduto).subscribe((resp: Produto) =>{
-      this.produto = resp
-    })
+  assistir(){
+    if (this.id == null){
+      alert('Selecione uma categoria antes de avançar!')
+    } else {
+      this.router.navigate(['/escolher-curso', this.id])
+    }
   }
 }

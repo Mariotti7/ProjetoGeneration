@@ -17,6 +17,7 @@ import { ConteudoComponent } from './conteudo/conteudo.component';
 import { PublicacaoComponent } from './publicacao/publicacao.component';
 import { CursoComponent } from './curso/curso.component';
 import { MeuCursoComponent } from './meu-curso/meu-curso.component';
+import { EscolherCursoComponent } from './escolher-curso/escolher-curso.component';
 
 
 
@@ -34,7 +35,8 @@ import { MeuCursoComponent } from './meu-curso/meu-curso.component';
     ConteudoComponent,
     PublicacaoComponent,
     CursoComponent,
-    MeuCursoComponent
+    MeuCursoComponent,
+    EscolherCursoComponent
 
   ],
   imports: [
