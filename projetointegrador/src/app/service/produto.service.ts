@@ -36,4 +36,8 @@ export class ProdutoService {
   putProduto(produto: Produto){
     return this.http.put('http://localhost:8080/produto', produto, this.token)
   }
+
+  deleteProduto(id:number){
+    return this.http.delete(`http://localhost:8080/produto/${id}`,  this.token)
+  }
 }
