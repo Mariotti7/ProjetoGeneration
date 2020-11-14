@@ -10,38 +10,41 @@
 
       <div class="row d-flex align-items-end">
         <div class="col-md-6">
-          <div class="form-group m-0">
+          <div class="form-group m-0" *ngFor="let item of listaCurso">
             <label class="txt" for="tema"
               >Escolha um Curso ou
               <a routerLink="/publicacao">Cadastre um novo</a></label
             >
             <select name="categoria" id="categoria" class="form-control">
               <option class="text-muted">
-                Escolha uma categoria
+                Escolha um Curso
               </option>
               <option>
-                Lógica de Programação
+              {{item.nome_curso}}
               </option>
               <option>
-                Raciocínio Lógico
+               {{item.nome_curso}}
               </option>
               <option>
-                Culinária
+              {{item.nome_curso}}
               </option>
               <option>
-                Música
+              {{item.nome_curso}}
               </option>
               <option>
-                Idiomas
+              {{item.nome_curso}}
               </option>
               <option>
-                Comunicação
+              {{item.nome_curso}}
               </option>
             
             </select>
             <select name="curso" id="curso" class="form-control mt-3">
               <option>
-                Curso
+                Escolha uma Categoria
+              </option>
+              <option>
+                {{item.categoria.tipo_curso}}
               </option>
             </select>
           </div>

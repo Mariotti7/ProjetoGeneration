@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioModelo } from '../model/UsuarioModelo';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-curso',
@@ -9,7 +11,8 @@ export class CursoComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    window.scroll(0,0)
   }
 
 }

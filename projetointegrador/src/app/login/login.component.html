@@ -12,21 +12,23 @@
               <input
                 type="email"
                 id="inputEmail"
+                name="inputEmail"
                 class="form-control"
                 placeholder="Usuário Email"
                 required
-                autofocus
+                autofocus [(ngModel)]='userLogin.email'
               />
               <label for="inputPassword" class="sr-only">Senha</label>
               <input
                 type="password"
                 id="inputPassword"
+                name="inputPassword"
                 class="form-control"
                 placeholder="Senha"
-                required
+                required [(ngModel)]='userLogin.senha'
               />
               <a routerLink="/singup" class="txt">Ainda não é um membro? Registre-se</a> 
-              <button class="btn btn-warning btn-dark btn-block font-weight-bold txt" style="box-shadow: 5px 5px #888888" type="submit">
+              <button class="btn btn-warning btn-dark btn-block font-weight-bold txt" style="box-shadow: 5px 5px #888888" type="submit" (click)='entrar()'>
                 ENTRAR
               </button>
               <p class="mt-5 mb-3 text-muted text-center txt">© 2020-2021</p>

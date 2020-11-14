@@ -9,24 +9,43 @@
       <li class="nav-item ">
         <a class="nav-link txt ml-3" routerLink='/home'>HOME <span class="sr-only">(página atual)</span></a>
       </li>
+
+      <div *ngIf='auth.btnLogin()'>
       <li class="nav-item">
         <a class="nav-link txt" routerLink='/login'>LOGIN</a>
       </li>
+      
+      </div>
+      <div *ngIf='auth.btnLogin()'>
       <li class="nav-item">
         <a class="nav-link txt" routerLink='/singup'>REGISTRAR</a>
       </li>
+    </div>
+
+      <div *ngIf='auth.btnSair()'>
       <li class="nav-item">
         <a class="nav-link txt" routerLink='/acesso'>ACESSO</a>
       </li>
+      </div>
+
+      <div *ngIf='auth.btnSair()'>
       <li class="nav-item">
         <a class="nav-link txt" routerLink='/conteudo'>CONTEUDO</a>
       </li>
+      </div>
+
+      <div *ngIf='auth.btnSair()'>
       <li class="nav-item">
         <a class="nav-link txt" routerLink='/publicacao'>PUBLICAÇÃO</a>
       </li>
+      </div>
+
+      <div *ngIf='auth.btnSair()'>
       <li class="nav-item">
-        <a class="nav-link txt">SAIR</a>
+        <a class="nav-link txt" (click)='sair()'>SAIR</a>
       </li>
+      </div>
+
       </ul>
   </div>
 </nav>
