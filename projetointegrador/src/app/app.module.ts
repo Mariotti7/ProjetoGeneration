@@ -18,6 +18,8 @@ import { PublicacaoComponent } from './publicacao/publicacao.component';
 import { CursoComponent } from './curso/curso.component';
 import { MeuCursoComponent } from './meu-curso/meu-curso.component';
 import { EscolherCursoComponent } from './escolher-curso/escolher-curso.component';
+import { EditarCursoComponent } from './editar-curso/editar-curso.component';
+import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
 
 
 
@@ -36,7 +38,9 @@ import { EscolherCursoComponent } from './escolher-curso/escolher-curso.componen
     PublicacaoComponent,
     CursoComponent,
     MeuCursoComponent,
-    EscolherCursoComponent
+    EscolherCursoComponent,
+    EditarCursoComponent,
+    DeletarCursoComponent
 
   ],
   imports: [

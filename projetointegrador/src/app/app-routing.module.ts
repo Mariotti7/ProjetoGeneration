@@ -9,6 +9,8 @@ import { PublicacaoComponent } from './publicacao/publicacao.component';
 import { CursoComponent } from './curso/curso.component';
 import { MeuCursoComponent } from './meu-curso/meu-curso.component';
 import { EscolherCursoComponent } from './escolher-curso/escolher-curso.component';
+import { EditarCursoComponent } from './editar-curso/editar-curso.component';
+import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
 
 
 const routes: Routes = [
@@ -20,8 +22,11 @@ const routes: Routes = [
   { path: 'conteudo', component: ConteudoComponent},
   { path: 'publicacao', component: PublicacaoComponent},
   {path: 'curso/:id', component: CursoComponent},
-  {path: 'meu-curso', component: MeuCursoComponent},
-  {path: 'escolher-curso/:id', component: EscolherCursoComponent}
+  {path: 'meu-curso/:id', component: MeuCursoComponent},
+  {path: 'escolher-curso/:id', component: EscolherCursoComponent},
+  {path: 'editar-curso/:id', component: EditarCursoComponent},
+  {path: 'deletar-curso/:id', component: DeletarCursoComponent}
+
 ];
 
 @NgModule({

@@ -28,4 +28,12 @@ export class ProdutoService {
   getByIdProduto(id: number){
     return this.http.get(`http://localhost:8080/produto/${id}`, this.token)
   }
+
+  getAllProdutoByUsuario(id:number){
+    return this.http.get(`http://localhost:8080/produto/usuario/${id}`, this.token)
+  }
+
+  putProduto(produto: Produto){
+    return this.http.put('http://localhost:8080/produto', produto, this.token)
+  }
 }
