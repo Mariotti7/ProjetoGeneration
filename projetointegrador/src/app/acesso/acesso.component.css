@@ -4,6 +4,7 @@
 }
 a {
   color: white;
+  text-decoration: none;
 }
 /* link que foi visitado */
 a:visited {

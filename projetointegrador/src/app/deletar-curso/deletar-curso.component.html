@@ -1,42 +1,47 @@
-<div class="container">
-    <div class="row mt-5 mb-5">
-        <div class="col-md-4">
-          <app-perfil-lateral></app-perfil-lateral>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-5 ">
-              <h5 id="quemsomos" class="txt font-weight-bold mt-4">Nome do Curso</h5>
-                <p class="txt ptext">
-                  {{produto.nome}}
-                </p>
-                
-                <h5 id="quemsomos" class="txt font-weight-bold">Categoria</h5>
-              <p class="txt ptext">
-                {{produto.categoria.descricao}}
-              </p>
-                
-              <h5 id="quemsomos" class="txt font-weight-bold">Descrição</h5>
-              <p class="txt ptext">
-                {{produto.descricao}}
-              </p>
-              <h5 id="quemsomos" class="txt font-weight-bold">Criador do Curso</h5>
-                <p class="txt ptext">
-                  {{produto.criador.nome}}
-                </p>
-                <h3>Tem certeza que deseja apagar o curso?</h3>
-                <div class="row mb-5">
-                    <div class="col-md-12 d-flex justify-content-center">
-                      <button class="btn btn-dark w-25 txt botao-estilo text-uppercase" (click)='btnSim()'>Sim</button>
-                    </div>
-                  </div>
-                  <div class="row mb-5">
-                    <div class="col-md-12 d-flex justify-content-center">
-                      <button class="btn btn-dark w-25 txt botao-estilo text-uppercase" (click)='btnNao()'>Não</button>
-                    </div>
-                  </div>
-            </div>
-            
-          </div>
+
+
+  <div class="container d-flex justify-content-center">
+    <div class="col-md-8">
+      <h3 class="text-center mb-4 txt font-weight-bold">SEU CURSO</h3>
     </div>
   </div>
+  <div class="container mt-3 ">
+    <div class="row">
+      <div class="col-md-6">
+        <h5 id="quemsomos" class="txt font-weight-bold mt-4">Nome do Curso</h5>
+          <p class="txt ptext">
+            {{produto.nome}}
+          </p>
+          
+          <h5 id="quemsomos" class="txt font-weight-bold">Categoria</h5>
+        <p class="txt ptext">
+          {{produto.categoria.descricao}}
+        </p>
+          
+        <h5 id="quemsomos" class="txt font-weight-bold">Descrição</h5>
+        <p class="txt ptext">
+          {{produto.descricao}}
+        </p>
+        <h5 id="quemsomos" class="txt font-weight-bold">Criador do Curso</h5>
+          <p class="txt ptext">
+            {{produto.criador.nome}}
+          </p>
+      </div>
+      
+      <div class="col-md-6 mb-3">
+        <h5 class="txt font-weight-bold mt-4 text-center">Tem certeza que deseja apagar esse curso?</h5>
+        <div class="row mb-5">
+          <div class="col-md-12 d-flex justify-content-center mt-4">
+            <button class="btn btn-dark w-25 txt botao-estilo text-uppercase mr-3" (click)='btnSim()'>Sim</button>
+            <button class="btn btn-dark w-25 txt botao-estilo text-uppercase" (click)='btnNao()'>Não</button>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-12 d-flex justify-content-center">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   
