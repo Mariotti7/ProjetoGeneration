@@ -4,6 +4,7 @@ import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 import { UsuarioService } from '../service/usuario.service';
@@ -33,7 +34,8 @@ export class PublicacaoComponent implements OnInit {
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     private usuarioService: UsuarioService,
-    private router: Router
+    private router: Router,
+    private alert: AlertasService
   ) { }
 
   ngOnInit(){
@@ -71,7 +73,7 @@ export class PublicacaoComponent implements OnInit {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
         this.produto = resp
         this.produto = new Produto()
-        alert('Curso realizada com sucesso!')
+        this.alert.showAlertSuccess('Curso cadastrado com sucesso!')
         this.router.navigate(['/conteudo'])
       })
     }

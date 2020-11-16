@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -20,14 +21,14 @@ export class EditarCursoComponent implements OnInit {
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
-
   idCategoria: number
 
   constructor(
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -50,14 +51,18 @@ export class EditarCursoComponent implements OnInit {
   }
 
   salvar(){
-    this.categoria.id = this.idCategoria
-    this.produto.categoria = this.categoria
+    if(this.produto.nome == null || this.produto.descricao == null || this.produto.link == null || this.produto.categoria == null){
+      this.alert.showAlertDanger('Preencha todos os campos corretamente antes de salvar!')
+    } else {
+      this.categoria.id = this.idCategoria
+      this.produto.categoria = this.categoria
 
-    this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
-      this.produto = resp
-      this.router.navigate(['/acesso'])
-      alert('Produto editado com sucesso')
+      this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
+        this.produto = resp
+        this.router.navigate(['/acesso'])
+        this.alert.showAlertSuccess('Curso editado com sucesso')
     })
+    }  
   }
 
   findByIdProduto(id: number){

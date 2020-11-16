@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -19,7 +20,8 @@ export class EscolherCursoComponent implements OnInit {
   constructor(
     private produtoService: ProdutoService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -42,7 +44,7 @@ export class EscolherCursoComponent implements OnInit {
   }
   assistir(){
     if (this.id == null){
-      alert('Selecione um curso para assistir!')
+      this.alert.showAlertDanger('Selecione um curso para assistir!')
     } else {
       this.router.navigate(['/curso', this.id])
     }

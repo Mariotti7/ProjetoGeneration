@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import{FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { ModalModule} from 'ngx-bootstrap/modal'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { MeuCursoComponent } from './meu-curso/meu-curso.component';
 import { EscolherCursoComponent } from './escolher-curso/escolher-curso.component';
 import { EditarCursoComponent } from './editar-curso/editar-curso.component';
 import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
+import { AlertasComponent } from './alertas/alertas.component';
 
 
 
@@ -40,7 +42,8 @@ import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
     MeuCursoComponent,
     EscolherCursoComponent,
     EditarCursoComponent,
-    DeletarCursoComponent
+    DeletarCursoComponent,
+    AlertasComponent
 
   ],
   imports: [
@@ -48,7 +51,8 @@ import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

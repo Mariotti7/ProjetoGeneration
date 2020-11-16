@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { ProdutoService } from '../service/produto.service';
 import { UsuarioService } from '../service/usuario.service';
 
@@ -23,7 +24,8 @@ export class MeuCursoComponent implements OnInit {
     private produtoService: ProdutoService,
     private usuarioService: UsuarioService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private alert: AlertasService
   ) { 
   }
 
@@ -45,15 +47,15 @@ export class MeuCursoComponent implements OnInit {
     })
   }
   editar(){
-    if (this.id == null){
-      alert('Selecione um curso para editar!')
+    if (this.idProduto == null){
+      this.alert.showAlertDanger('Selecione um curso para editar!')
     } else {
       this.router.navigate(['/editar-curso', this.id])
     }
   }
   deletar(){
-    if (this.id == null){
-      alert('Selecione um curso para deletar!')
+    if (this.idProduto == null){
+      this.alert.showAlertDanger('Selecione um curso para deletar!')
     } else {
       this.router.navigate(['/deletar-curso', this.id])
     }
