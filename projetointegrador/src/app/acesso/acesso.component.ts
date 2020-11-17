@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { UsuarioService } from '../service/usuario.service';
 
 @Component({
@@ -15,10 +17,19 @@ export class AcessoComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private usuarioService: UsuarioService
+    private usuarioService: UsuarioService,
+    private alert: AlertasService
   ) { }
 
   ngOnInit(){
+
+    let token = environment.token
+
+    if(token == ''){
+      this.router.navigate(['/login'])
+      this.alert.showAlertDanger('Faça login para ter acesso a plataforma')
+    }
+
     window.scroll(0, 0)
     this.findUsuarioByEmail()
   }

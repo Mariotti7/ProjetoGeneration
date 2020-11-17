@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
 import { AlertasService } from '../service/alertas.service';
@@ -30,6 +31,13 @@ export class MeuCursoComponent implements OnInit {
   }
 
   ngOnInit() {
+    let token = environment.token
+
+    if(token == ''){
+      this.router.navigate(['/login'])
+      this.alert.showAlertDanger('Faça login para ter acesso a plataforma')
+    }
+
     window.scroll(0,0)
     this.id = this.route.snapshot.params['id']
     this.findProdutosByIdUsuario()

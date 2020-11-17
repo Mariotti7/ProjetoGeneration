@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
 
 @Injectable({
@@ -12,7 +13,7 @@ export class ProdutoService {
   ) { }
 
   token = {
-    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+    headers: new HttpHeaders().set('Authorization', environment.token)
   }
   getAllProduto(){
     return this.http.get('http://localhost:8080/produto', this.token)

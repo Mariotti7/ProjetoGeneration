@@ -1,5 +1,6 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-perfil-lateral',
@@ -12,7 +13,7 @@ export class PerfilLateralComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    this.nome = localStorage.getItem('nome')
+  ngOnInit() {
+    this.nome = environment.nome
   }
 }

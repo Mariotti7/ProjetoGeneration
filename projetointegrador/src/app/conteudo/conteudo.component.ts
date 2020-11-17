@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { AlertasService } from '../service/alertas.service';
@@ -26,6 +27,13 @@ export class ConteudoComponent implements OnInit {
   ) { }
 
   ngOnInit(){
+    let token = environment.token
+
+    if(token == ''){
+      this.router.navigate(['/login'])
+      this.alert.showAlertDanger('Faça login para ter acesso a plataforma')
+    }
+
     window.scroll(0, 0)
     this.findAllCategorias()
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { faInfo } from '@fortawesome/free-solid-svg-icons';
+import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { AlertasService } from '../service/alertas.service';
@@ -32,6 +33,13 @@ export class EditarCursoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    let token = environment.token
+
+    if(token == ''){
+      this.router.navigate(['/login'])
+      this.alert.showAlertDanger('Faça login para ter acesso a plataforma')
+    }
+
     window.scroll(0,0)
     this.findAllCategorias()
     this.idProduto = this.route.snapshot.params["id"]
@@ -60,7 +68,7 @@ export class EditarCursoComponent implements OnInit {
       this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
         this.produto = resp
         this.router.navigate(['/acesso'])
-        this.alert.showAlertSuccess('Curso editado com sucesso')
+        this.alert.showAlertSuccess('Curso editado com sucesso!')
     })
     }  
   }

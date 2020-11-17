@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -26,10 +28,19 @@ export class CursoComponent implements OnInit {
   constructor(
     private produtoService: ProdutoService,
     private route: ActivatedRoute,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private router: Router,
+    private alert: AlertasService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    let token = environment.token
+
+    if(token == ''){
+      this.router.navigate(['/login'])
+      this.alert.showAlertDanger('Faça login para ter acesso a plataforma')
+    }
+
     window.scroll(0,0)
     this.idProduto = this.route.snapshot.params['id']
     this.findByIdProduto(this.idProduto)
