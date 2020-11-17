@@ -17,14 +17,14 @@ export class CategoriaService {
   }
 
   getAllCategoria(){
-    return this.http.get('http://localhost:8080/categoria', this.token)
+    return this.http.get('https://donate-skills.herokuapp.com/categoria', this.token)
   }
 
   getByIdCategoria(id: number){
-    return this.http.get(`http://localhost:8080/categoria/${id}`, this.token)
+    return this.http.get(`https://donate-skills.herokuapp.com/categoria/${id}`, this.token)
   }
 
   postCategoria(categoria: Categoria){
-    return this.http.post('http://localhost:8080/categoria', categoria, this.token)
+    return this.http.post('https://donate-skills.herokuapp.com/categoria', categoria, this.token)
   }
 }

@@ -16,6 +16,6 @@ export class UsuarioService {
   }
   getUsuarioByEmail(){
     
-    return this.http.get(`http://localhost:8080/usuario/email/${environment.email}`, this.token)
+    return this.http.get(`https://donate-skills.herokuapp.com/usuario/email/${environment.email}`, this.token)
   }
 }

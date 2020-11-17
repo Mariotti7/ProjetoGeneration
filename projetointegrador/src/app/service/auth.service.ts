@@ -12,11 +12,11 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   logar(userLogin: UserLogin){
-    return this.http.post('http://localhost:8080/usuario/logar', userLogin)
+    return this.http.post('https://donate-skills.herokuapp.com/usuario/logar', userLogin)
   }
 
   cadastrar(usuario: Usuario){
-    return this.http.post('http://localhost:8080/usuario/cadastrar', usuario)
+    return this.http.post('https://donate-skills.herokuapp.com/usuario/cadastrar', usuario)
   }
 
   btnSair(){

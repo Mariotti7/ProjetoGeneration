@@ -16,29 +16,29 @@ export class ProdutoService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
   getAllProduto(){
-    return this.http.get('http://localhost:8080/produto', this.token)
+    return this.http.get('https://donate-skills.herokuapp.com/produto', this.token)
   }
 
   postProduto(produto: Produto){
-    return this.http.post('http://localhost:8080/produto', produto, this.token)
+    return this.http.post('https://donate-skills.herokuapp.com/produto', produto, this.token)
   }
 
   getAllProdutoByCategoria(id:number){
-    return this.http.get(`http://localhost:8080/produto/categoria/${id}`, this.token)
+    return this.http.get(`https://donate-skills.herokuapp.com/produto/categoria/${id}`, this.token)
   }
   getByIdProduto(id: number){
     return this.http.get(`http://localhost:8080/produto/${id}`, this.token)
   }
 
   getAllProdutoByUsuario(id:number){
-    return this.http.get(`http://localhost:8080/produto/usuario/${id}`, this.token)
+    return this.http.get(`https://donate-skills.herokuapp.com/produto/usuario/${id}`, this.token)
   }
 
   putProduto(produto: Produto){
-    return this.http.put('http://localhost:8080/produto', produto, this.token)
+    return this.http.put('https://donate-skills.herokuapp.com/produto', produto, this.token)
   }
 
   deleteProduto(id:number){
-    return this.http.delete(`http://localhost:8080/produto/${id}`,  this.token)
+    return this.http.delete(`https://donate-skills.herokuapp.com/produto/${id}`,  this.token)
   }
 }
