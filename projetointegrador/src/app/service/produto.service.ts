@@ -27,7 +27,7 @@ export class ProdutoService {
     return this.http.get(`https://donate-skills.herokuapp.com/produto/categoria/${id}`, this.token)
   }
   getByIdProduto(id: number){
-    return this.http.get(`http://localhost:8080/produto/${id}`, this.token)
+    return this.http.get(`https://donate-skills.herokuapp.com/produto/${id}`, this.token)
   }
 
   getAllProdutoByUsuario(id:number){

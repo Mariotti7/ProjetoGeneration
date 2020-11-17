@@ -13,7 +13,7 @@
           <h5 class="mt-3">Selecione o curso desejado:</h5>
           <select name="produto" id="produto" class="form-control" [(ngModel)]='idProduto' (change)='findByIdProduto()'>
             <option  *ngFor='let item of listaProdutos' value="{{item.id}}">
-              {{item.descricao}}
+              {{item.nome}}
           </option>
           </select>
         </div>
